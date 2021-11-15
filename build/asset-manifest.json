@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76615619.chunk.css",
+    "main.js": "/static/js/main.ff8a0c2a.chunk.js",
+    "main.js.map": "/static/js/main.ff8a0c2a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.aa1068f4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.aa1068f4.js.map",
+    "static/js/2.8eec8b13.chunk.js": "/static/js/2.8eec8b13.chunk.js",
+    "static/js/2.8eec8b13.chunk.js.map": "/static/js/2.8eec8b13.chunk.js.map",
+    "static/js/3.1669fae3.chunk.js": "/static/js/3.1669fae3.chunk.js",
+    "static/js/3.1669fae3.chunk.js.map": "/static/js/3.1669fae3.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.76615619.chunk.css.map": "/static/css/main.76615619.chunk.css.map",
+    "static/js/2.8eec8b13.chunk.js.LICENSE.txt": "/static/js/2.8eec8b13.chunk.js.LICENSE.txt",
+    "static/media/Login.d42a9d81.gif": "/static/media/Login.d42a9d81.gif",
+    "static/media/Logistics.4e9b9711.gif": "/static/media/Logistics.4e9b9711.gif",
+    "static/media/Mobile payments.460fdd15.gif": "/static/media/Mobile payments.460fdd15.gif",
+    "static/media/Monster 404 Error.7c2d18c8.gif": "/static/media/Monster 404 Error.7c2d18c8.gif",
+    "static/media/Register.6c582748.gif": "/static/media/Register.6c582748.gif",
+    "static/media/Ride a bicycle.6ba7b527.gif": "/static/media/Ride a bicycle.6ba7b527.gif",
+    "static/media/Visual data.20014e0f.gif": "/static/media/Visual data.20014e0f.gif",
+    "static/media/banner1.3979e68c.jpg": "/static/media/banner1.3979e68c.jpg",
+    "static/media/banner2.33cca187.jpg": "/static/media/banner2.33cca187.jpg",
+    "static/media/banner3.310b0fd3.jpg": "/static/media/banner3.310b0fd3.jpg",
+    "static/media/cycling.a7aae31e.png": "/static/media/cycling.a7aae31e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa1068f4.js",
+    "static/js/2.8eec8b13.chunk.js",
+    "static/css/main.76615619.chunk.css",
+    "static/js/main.ff8a0c2a.chunk.js"
+  ]
+}
