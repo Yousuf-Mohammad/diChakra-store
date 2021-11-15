@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const DashboardHeader = () => {
-    const { user, logout } = useAuth();
+    const { user, logout, admin } = useAuth();
     return (
 
 
@@ -30,15 +30,15 @@ const DashboardHeader = () => {
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 {user.email ? <Nav.Link className="text-dark" as={Link} to='/'>Home</Nav.Link> : ""}
-                                {user.role !== 'admin' ? <Nav.Link className="text-dark" as={Link} to='/addService'>Add NewService</Nav.Link> : ""}
-                                {user.role !== 'admin' ? <Nav.Link className="text-dark" as={Link} to='/adminmaker'>Make Admin</Nav.Link> : ""}
-                                {user.role !== 'admin' ? <Nav.Link className="text-dark" as={Link} to='/reviews'>Review</Nav.Link> : ""}
+                                {admin && <Nav.Link className="text-dark" as={Link} to='/addService'>Add NewService</Nav.Link>}
+                                {admin && <Nav.Link className="text-dark" as={Link} to='/adminmaker'>Make Admin</Nav.Link>}
+                                {(!admin) && <Nav.Link className="text-dark" as={Link} to='/reviews'>Review</Nav.Link>}
 
-                                {(user.role === "admin") ? <Nav.Link className="text-dark" as={Link} to='/myOrders'>My Orders</Nav.Link> : ""}
-                                {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/manageService'>Manage All Orders</Nav.Link> : ""}
-                                {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/products'>Manage All Product</Nav.Link> : ""}
-                                {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/paynow'>Pay Now</Nav.Link> : ""}
-                                {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/myOrders'>My Orders</Nav.Link> : ""}
+                                {!admin && <Nav.Link className="text-dark" as={Link} to='/myOrders'>My Orders</Nav.Link>}
+                                {admin && <Nav.Link className="text-dark" as={Link} to='/manageService'>Manage All Orders</Nav.Link>}
+                                {admin && <Nav.Link className="text-dark" as={Link} to='/products'>Manage All Product</Nav.Link>}
+                                {!admin && <Nav.Link className="text-dark" as={Link} to='/paynow'>Pay Now</Nav.Link>}
+
 
                                 <Button style={{ marginTop: "20px" }} onClick={logout} variant="secondary">LogOut</Button>
 

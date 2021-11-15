@@ -69,9 +69,9 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`https://sheltered-taiga-17729.herokuapp.com/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
-            .then(data => setAdmin(data.role))
+            .then(data => setAdmin(data.admin))
     }, [user.email])
 
     const logout = () => {
