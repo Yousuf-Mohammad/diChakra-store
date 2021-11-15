@@ -7,21 +7,21 @@ import './ManageProducts.css';
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://sheltered-taiga-17729.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
 
     // const [product, setProduct] = useState([]);
     // useEffect(() => {
-    //     fetch('http://localhost:5000/products/:id')
+    //     fetch('https://sheltered-taiga-17729.herokuapp.com/products/:id')
     //         .then(res => res.json())
     //         .then(data => setProduct(data));
     // }, [])
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to Remove this Order?');
         if (confirmation) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://sheltered-taiga-17729.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const { user } = useAuth()
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://sheltered-taiga-17729.herokuapp.com/orders')
             .then(res => res.json())
 
             .then((data) => {
@@ -21,7 +21,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to Remove this Order?');
         if (confirmation) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://sheltered-taiga-17729.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

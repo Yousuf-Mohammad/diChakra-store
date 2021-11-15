@@ -38,7 +38,7 @@ const DashboardHeader = () => {
                                 {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/manageService'>Manage All Orders</Nav.Link> : ""}
                                 {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/products'>Manage All Product</Nav.Link> : ""}
                                 {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/paynow'>Pay Now</Nav.Link> : ""}
-                                {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/products'>Manage All Product</Nav.Link> : ""}
+                                {(user.role !== "admin") ? <Nav.Link className="text-dark" as={Link} to='/myOrders'>My Orders</Nav.Link> : ""}
 
                                 <Button style={{ marginTop: "20px" }} onClick={logout} variant="secondary">LogOut</Button>
 

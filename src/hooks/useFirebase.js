@@ -69,7 +69,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/${user.email}`)
+        fetch(`https://sheltered-taiga-17729.herokuapp.com/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.role))
     }, [user.email])
@@ -86,7 +86,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://sheltered-taiga-17729.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

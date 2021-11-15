@@ -14,14 +14,14 @@ const OrderPage = () => {
     const { _id } = useParams();
     const { register, handleSubmit, reset } = useForm();
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${_id}`)
+        fetch(`https://sheltered-taiga-17729.herokuapp.com/products/${_id}`)
             .then((res) => res.json())
             .then((data) => setServiceDetails(data));
     }, [_id])
 
     const onSubmit = data => {
         data.Status = "Pending"
-        fetch('http://localhost:5000/orders', {
+        fetch('https://sheltered-taiga-17729.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
