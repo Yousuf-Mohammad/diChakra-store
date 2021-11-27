@@ -95,9 +95,9 @@ const ManageService = () => {
                                 <h5> <span className="text-warning">Ordered Package: </span>{order.Service}</h5>
                                 <h5><span className="text-warning">Address:</span> {order.Address}</h5>
                                 <h5><span className="text-warning">Contact Number:</span> {order.Phone}</h5>
-                                <h5><span className="text-warning">Price:</span> ${order.Price}</h5>
+                                <h5><span className="text-warning">Price:</span> {order.Price}Tk</h5>
                                 <h5><span className="text-warning">Status:</span> {order.Status}</h5>
-                                {order?.Status === 'Pending' ? <button className="btn btn-success me-2 mb-2" onClick={() => handleUpdate(order._id)}>Approve</button> : ''}
+                                {order?.Status === 'Pending' ? <button className="btn btn-success me-2 mb-2" onClick={() => handleUpdate(order._id)}>Ship</button> : ''}
                                 {order?.Status === 'Pending' ? <button className="btn btn-danger mb-2" onClick={() => handleDelete(order._id)}>Delete</button> : ''}
                             </div>
                         </div>)

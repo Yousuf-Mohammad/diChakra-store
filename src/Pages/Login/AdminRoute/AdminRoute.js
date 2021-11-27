@@ -4,13 +4,13 @@ import { Route, Redirect } from 'react-router-dom';
 import useAuth from './../../../hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {
-    const { user } = useAuth();
+    const { user,admin } = useAuth();
 
     return (
         <Route
             {...rest}
             render={({ location }) =>
-                user?.role !== "admin" ? (
+            user.email && admin ?  (
                     children
                 ) : (
                     <Redirect

@@ -31,19 +31,19 @@ const Register = () => {
     return (
         <div>
             <Header></Header>
-            <div className='row' style={{ margin: "150px" }}>
+            <div className='row' style={{ marginTop: "150px" }}>
                 <div className='col-md-12 col-lg-6'>
-                    <img style={{ width: "80%" }} src={gif} alt="" />
+                    <img style={{ width: "70%" }} src={gif} alt="" />
 
                 </div>
 
                 <div className='col-md-12 col-lg-6'>
                     <h2>Please Register</h2>
                     <form onSubmit={handleLoginSubmit} style={{ width: "100%" }}>
-                        <input style={{ width: "500px" }} onBlur={handleOnChange} type="name" name="name" placeholder="Your Name" id="" /><br />
-                        <input style={{ width: "500px" }} onBlur={handleOnChange} type="email" name="email" placeholder="Your Email" id="" /><br />
-                        <input style={{ width: "500px" }} onBlur={handleOnChange} type="password" name="password" placeholder="Password" id="" /> <br />
-                        <input style={{ marginBottom: "50px", width: "500px" }} onBlur={handleOnChange} type="password" name="password" placeholder="Retype Password" id="" /> <br />
+                        <input style={{ width: "70%" }} onBlur={handleOnChange} type="name" name="name" placeholder="Your Name" id="" /><br />
+                        <input style={{ width: "70%" }} onBlur={handleOnChange} type="email" name="email" placeholder="Your Email" id="" /><br />
+                        <input style={{ width: "70%" }} onBlur={handleOnChange} type="password" name="password" placeholder="Password" id="" /> <br />
+                        <input style={{ marginBottom: "50px", width: "70%" }} onBlur={handleOnChange} type="password" name="password" placeholder="Retype Password" id="" /> <br />
 
                         <button type="submit" className="btn btn-secondary">Submit</button>
                     </form>

@@ -1,6 +1,7 @@
 import { React } from 'react';
 import DashboardHeader from './DashboardHeader';
 import gif from "../../images/Visual data.gif"
+import "./Dashboard.css";
 
 
 const Dashboard = () => {
@@ -13,7 +14,7 @@ const Dashboard = () => {
                 <DashboardHeader></DashboardHeader>
             </div>
             <div>
-                <img style={{ width: "550px", marginTop: "70px" }} src={gif} alt="" />
+                <img className="ani" src={gif} alt="" />
             </div>
         </div>
 

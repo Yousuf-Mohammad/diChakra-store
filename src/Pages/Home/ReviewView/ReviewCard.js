@@ -1,12 +1,11 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-
-const element = <FontAwesomeIcon style={{ color: "gold" }} icon={faStar} />
-
+// import Rating from '../ReviewView/Rating/Rating'
+import Rating from 'react-rating';
+import './ReviewCard.css'
 
 
 
+import './ReviewCard.css';
 
 
 const ReviewCard = ({ reviews }) => {
@@ -17,7 +16,17 @@ const ReviewCard = ({ reviews }) => {
 
             <h3>{Name}</h3>
             <p className="px-3">{review}</p>
-            <p> {element}(rated:{rating}) </p>
+            {/* <Rating rating={rating}></Rating> */}
+            <Rating className="icon-color"
+                initialRating={rating}
+                emptySymbol="far fa-star "
+                fullSymbol="fas fa-star "
+                readonly></Rating>
+
+
+
+
+
 
         </div>
     );

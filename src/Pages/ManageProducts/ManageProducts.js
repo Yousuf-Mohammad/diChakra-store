@@ -40,18 +40,18 @@ const ManageProducts = () => {
         <div>
             <DashboardHeader></DashboardHeader>
             <div id="department" className='container'>
-                <h2 className="text-dark mt-5 fw-bolder">Total Products: {products.length}</h2>
+                <h2 className="text-dark mt-5 fw-bolder ">Total Products: {products.length}</h2>
 
 
-                <div className="card-container mb-5">
+                <div className="card-container mb-5 ">
 
                     {
                         products.map(product => <div key={product._id}>
-                            <div className=" m-3 box">
+                            <div className="  box">
                                 <h5><span className="text-warning"> Name:</span> {product.name}</h5>
                                 <h5> <span className="text-warning"> Description: </span>{product.description}</h5>
 
-                                <h5><span className="text-warning">Price:</span> ${product.price} Tk</h5>
+                                <h5><span className="text-warning">Price:</span> {product.price} Tk</h5>
 
                                 <button className="btn btn-secondary mb-2" onClick={() => handleDelete(product._id)}>Delete</button>
                             </div>

@@ -23,7 +23,7 @@ const Header = () => {
                     />diChakra</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link className="text-light" as={Link} to="/allProducts">AllProduct </Nav.Link>
+                        <Nav.Link className="text-light" as={Link} to="/allProducts">Explore </Nav.Link>
                         {user?.email ? <Nav.Link className="text-light" as={Link} to="/dashboard">DashBoard </Nav.Link> : ""}
 
 

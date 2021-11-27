@@ -18,6 +18,7 @@ const ReviewView = () => {
                     reviews.map(reviews => <ReviewCard
                         key={reviews._id}
                         reviews={reviews}
+
                     ></ReviewCard>)
                 }
             </div>

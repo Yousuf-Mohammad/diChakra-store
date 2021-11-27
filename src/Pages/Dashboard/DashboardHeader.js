@@ -30,7 +30,7 @@ const DashboardHeader = () => {
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 {user.email ? <Nav.Link className="text-dark" as={Link} to='/'>Home</Nav.Link> : ""}
-                                {admin && <Nav.Link className="text-dark" as={Link} to='/addService'>Add NewService</Nav.Link>}
+                                {admin && <Nav.Link className="text-dark" as={Link} to='/addService'>Add New Product</Nav.Link>}
                                 {admin && <Nav.Link className="text-dark" as={Link} to='/adminmaker'>Make Admin</Nav.Link>}
                                 {(!admin) && <Nav.Link className="text-dark" as={Link} to='/reviews'>Review</Nav.Link>}
 

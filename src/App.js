@@ -56,9 +56,9 @@ function App() {
             <PrivateRoute exact path='/paynow'>
               <PayNow></PayNow>
             </PrivateRoute>
-            <PrivateRoute exact path='/adminmaker'>
+            <AdminRoute exact path='/adminmaker'>
               <AdminMaker></AdminMaker>
-            </PrivateRoute>
+            </AdminRoute>
             <PrivateRoute exact path='/reviews'>
               <Review></Review>
             </PrivateRoute>

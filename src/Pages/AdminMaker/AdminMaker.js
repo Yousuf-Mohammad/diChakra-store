@@ -35,12 +35,12 @@ const AdminMaker = () => {
     return (
         <div>
             <DashboardHeader></DashboardHeader>
-            <h2 style={{ margin: "100px" }}>Make Another Admin</h2>
-            <div style={{ margin: "200px" }}>
+            <h2 style={{ marginTop: "100px" }}>Make Another Admin</h2>
+            <div style={{ marginTop: "200px" }}>
 
                 <form onSubmit={handleAdminSubmit}>
 
-                    <input type="email" name="" label="Mail Address" id="" onBlur={handleOnBlur} />
+                    <input style={{ width: "250px" }} type="email" name="" label="Mail Address" id="" onBlur={handleOnBlur} />
 
                     <input style={{ marginLeft: "10px" }} className="btn btn-secondary" type="submit" />
                 </form>
