@@ -6,5 +6,5 @@ You can check the site here: https://dichakra-store.web.app/
 * Products can be added from the UI. Orders can be removed or Approved from the site using crud operation.  
 * Image and data are collected from open sources m hence no copy right issue . 
 * You can check the Admin functionality using 
-Email:admin@admin.com
+user:admin@admin.com
 pass:123456
