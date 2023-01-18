@@ -14,7 +14,7 @@ const AdminMaker = () => {
 
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('https://sheltered-taiga-17729.herokuapp.com/users/admin', {
+        fetch('https://dichakra-store-backend.onrender.com/users/admin', {
             method: 'PUT',
             headers: {
 

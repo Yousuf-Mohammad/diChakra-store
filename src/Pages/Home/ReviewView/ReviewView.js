@@ -6,7 +6,7 @@ import "./ReviewView.css"
 const ReviewView = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://sheltered-taiga-17729.herokuapp.com/reviews')
+        fetch('https://dichakra-store-backend.onrender.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])

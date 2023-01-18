@@ -13,7 +13,7 @@ const AddANewService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://sheltered-taiga-17729.herokuapp.com/products', data)
+        axios.post('https://dichakra-store-backend.onrender.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert(' Updated Successfully')

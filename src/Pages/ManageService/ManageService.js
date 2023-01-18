@@ -5,14 +5,14 @@ const ManageService = () => {
 
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('https://sheltered-taiga-17729.herokuapp.com/orders')
+        fetch('https://dichakra-store-backend.onrender.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
 
     const [order, setOrder] = useState([]);
     useEffect(() => {
-        fetch('https://sheltered-taiga-17729.herokuapp.com/orders/:id')
+        fetch('https://dichakra-store-backend.onrender.com/orders/:id')
             .then(res => res.json())
             .then(data => setOrder(data));
     }, [])
@@ -22,7 +22,7 @@ const ManageService = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to delete this Order?');
         if (confirmation) {
-            const url = `https://sheltered-taiga-17729.herokuapp.com/orders/${id}`;
+            const url = `https://dichakra-store-backend.onrender.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -51,7 +51,7 @@ const ManageService = () => {
         }
         setOrders(updatedOrder);
 
-        const url = `https://sheltered-taiga-17729.herokuapp.com/orders/${id}`;
+        const url = `https://dichakra-store-backend.onrender.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

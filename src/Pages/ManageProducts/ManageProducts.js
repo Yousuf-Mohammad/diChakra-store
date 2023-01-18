@@ -7,7 +7,7 @@ import './ManageProducts.css';
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://sheltered-taiga-17729.herokuapp.com/products')
+        fetch('https://dichakra-store-backend.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -21,7 +21,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to Remove this Order?');
         if (confirmation) {
-            const url = `https://sheltered-taiga-17729.herokuapp.com/products/${id}`;
+            const url = `https://dichakra-store-backend.onrender.com/products/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

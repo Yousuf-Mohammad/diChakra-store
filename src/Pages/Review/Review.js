@@ -12,7 +12,7 @@ const Review = () => {
     const onSubmit = data => {
         data.rating = rating;
         console.log(data)
-        axios.post('https://sheltered-taiga-17729.herokuapp.com/reviews', data)
+        axios.post('https://dichakra-store-backend.onrender.com/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert(' Posted Successfully')

@@ -8,7 +8,7 @@ const AllProducts = () => {
 
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('https://sheltered-taiga-17729.herokuapp.com/products')
+        fetch('https://dichakra-store-backend.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
