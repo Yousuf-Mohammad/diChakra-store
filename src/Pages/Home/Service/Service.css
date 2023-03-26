@@ -1,11 +1,12 @@
 .service {
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 15px;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: 5px 5px 5px gray;
 
+}
 
-
-
+.service:hover {
+    box-shadow: 10px 10px 25px black;
 }
 
 img {

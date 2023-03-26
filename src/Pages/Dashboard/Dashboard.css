@@ -1,12 +1,13 @@
 @media only screen and (max-width: 768px) {
-    .ani{
+    .ani {
         width: 80%;
-    
+
     }
 }
-@media only screen and (min-width: 768px){
-    .ani{
+
+@media only screen and (min-width: 768px) {
+    .ani {
         width: 550px;
-    
+
     }
 }

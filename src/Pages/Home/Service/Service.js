@@ -9,7 +9,7 @@ const Service = ({ service }) => {
         <div className="service pb-3 mb-5" >
             <img style={{ height: '400px' }} src={img} alt="" />
             <h3>{name}</h3>
-s
+
             <p>price :  {price} Tk</p>
             <Link to={`/services/${_id}`}>
                 <button className="btn btn-primary ">Detail</button>

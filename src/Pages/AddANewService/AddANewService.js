@@ -35,7 +35,7 @@ const AddANewService = () => {
                     <div className="col-md-12 col-sm-12 col-lg-6 mt-5 add-service">
 
 
-                        <img src={gif} alt="" />
+                        <img className='addProductGif' src={gif} alt="" />
                     </div>
                     <div className="col-md-12 col-sm-12 col-lg-6 my-5 add-service">
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -44,7 +44,7 @@ const AddANewService = () => {
                             <input type="number" {...register("price", { required: true })} placeholder="Price" />
                             <input {...register("img", { required: true })} placeholder="Image Url" />
 
-                            <input className="btn btn-dark" type="submit" />
+                            <input className="btn btn-dark" type="submit" placeholder='Submit' />
                         </form>
                     </div>
 
