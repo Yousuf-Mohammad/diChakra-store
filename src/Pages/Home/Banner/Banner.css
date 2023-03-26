@@ -1,3 +1,7 @@
 img {
-    height: 600px;
+    height: 830px;
+}
+
+.bannerImg {
+    object-fit: cover;
 }

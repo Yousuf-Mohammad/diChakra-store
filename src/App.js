@@ -26,6 +26,7 @@ import Review from './Pages/Review/Review';
 
 
 function App() {
+
   return (
     <div className="App">
       <AuthProvider>
@@ -34,7 +35,7 @@ function App() {
 
           <Switch>
             <Route exact path="/">
-              <Home></Home>
+              <Home />
             </Route>
 
             <Route path="/login">

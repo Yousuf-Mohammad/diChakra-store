@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <>
 
-            <Navbar className="text-light" bg="secondary" variant="dark" sticky="top" collapseOnSelect expand="lg" >
+            <Navbar className="text-light" bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg" >
                 <Container>
                     <Navbar.Brand href="/" style={{ fontWeight: "bold", fontSize: '30px' }}><img
                         alt=""

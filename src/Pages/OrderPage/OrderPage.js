@@ -14,14 +14,14 @@ const OrderPage = () => {
     const { _id } = useParams();
     const { register, handleSubmit, reset } = useForm();
     useEffect(() => {
-        fetch(`https://sheltered-taiga-17729.herokuapp.com/products/${_id}`)
+        fetch(`https://dichakra-store-backend.onrender.com/products/${_id}`)
             .then((res) => res.json())
             .then((data) => setServiceDetails(data));
     }, [_id])
 
     const onSubmit = data => {
         data.Status = "Pending"
-        fetch('https://sheltered-taiga-17729.herokuapp.com/orders', {
+        fetch('https://dichakra-store-backend.onrender.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

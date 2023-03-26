@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const { user } = useAuth()
     useEffect(() => {
-        fetch('https://sheltered-taiga-17729.herokuapp.com/orders')
+        fetch('https://dichakra-store-backend.onrender.com/orders')
             .then(res => res.json())
 
             .then((data) => {
@@ -21,7 +21,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to Remove this Order?');
         if (confirmation) {
-            const url = `https://sheltered-taiga-17729.herokuapp.com/orders/${id}`;
+            const url = `https://dichakra-store-backend.onrender.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

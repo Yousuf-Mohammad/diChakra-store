@@ -12,10 +12,10 @@ const ReviewCard = ({ reviews }) => {
 
     const { Name, review, rating } = reviews;
     return (
-        <div className=" pb-3" style={{ border: "1px solid black", borderRadius: "5px" }}>
+        <div className=" pb-3 reviewBox" style={{ border: "1px solid black", borderRadius: "5px" }}>
 
             <h3>{Name}</h3>
-            <p className="px-3">{review}</p>
+            <p className="px-3 ">{review}</p>
             {/* <Rating rating={rating}></Rating> */}
             <Rating className="icon-color"
                 initialRating={rating}
