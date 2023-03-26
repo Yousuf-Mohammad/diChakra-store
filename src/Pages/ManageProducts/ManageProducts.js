@@ -48,6 +48,7 @@ const ManageProducts = () => {
                     {
                         products.map(product => <div key={product._id}>
                             <div className="  box">
+
                                 <h5><span className="text-warning"> Name:</span> {product.name}</h5>
                                 <h5> <span className="text-warning"> Description: </span>{product.description}</h5>
 

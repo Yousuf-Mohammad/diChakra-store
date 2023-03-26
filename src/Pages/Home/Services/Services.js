@@ -10,25 +10,20 @@ const Services = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get("https://dichakra-store-backend.onrender.com/products")
-            .then(response => {
-                setProducts(response.data)
-                console.log(products)
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        axios.get("https://dichakra-store-backend.onrender.com/products")
-            .then(response => {
-                setProducts(response.data)
-                console.log(products)
-            })
-            .catch(error => {
-                console.log(error);
-            });
 
 
-        setTimeout(() => { setLoading(false) }, 4000);
+
+
+        setTimeout(() => {
+            axios.get("https://dichakra-store-backend.onrender.com/products")
+                .then(response => {
+                    setProducts(response.data)
+                    console.log(products)
+                })
+                .catch(error => {
+                    console.log(error);
+                }); setLoading(false)
+        }, 6000);
     }, [])
 
 
