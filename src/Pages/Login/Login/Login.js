@@ -5,7 +5,7 @@ import useAuth from './../../../hooks/useAuth';
 import gif from '../../../images/Login.gif'
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Home/Footer/Footer';
-
+import "./login.css"
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     const { user, loginUser, authError } = useAuth();
@@ -31,24 +31,27 @@ const Login = () => {
     return (
         <div>
             <Header></Header>
-            <div className='row' style={{ marginTop: "150px" }}>
+            <div className='row' style={{ marginTop: "5%" }}>
                 <div className='col-sm-12 col-lg-6'>
-                    <img style={{ width: "70%" }} src={gif} alt="" />
+                    <img className='imageLogin' src={gif} alt="" />
 
                 </div>
-                <div className='col-sm-12 col-lg-6'>
-                    <h2>Please Login</h2>
-                    <form onSubmit={handleLoginSubmit}>
+                <div className='col-sm-12 col-lg-6 '>
+                <div className='loginBox'>
+                    <h2 style={{marginTop:"30px"}}>Please Login</h2>
+                    <hr />
+                    <form onSubmit={handleLoginSubmit} style={{marginTop:'50px'}}>
                         <input style={{ width: "60%", marginBottom: "10px" }} onBlur={handleOnChange} type="email" name="email" placeholder="Your Email" id="" /><br />
-                        <input style={{ marginBottom: "50px", width: "60%" }} onBlur={handleOnChange} type="password" name="password" placeholder="Password" id="" /> <br />
-
-                        <button type="submit" className="btn btn-secondary">Submit</button>
+                        <input style={{ marginBottom: "20px", width: "60%" }} onBlur={handleOnChange} type="password" name="password" placeholder="Password" id="" /> <br />
+                        <input type="submit" value="Submit" className='submitButton'/>
+                        
                     </form>
                     {user?.email && <p> logged in successfully!</p>}
                     {authError && <p>{authError}</p>}
 
-                    <p style={{ marginTop: "100px" }}>Dont have an account?</p>
-                    <p>Proceed to <Link to="/register">Register</Link></p>
+                    <p style={{ marginTop: "30px" , fontSize:"15px" }}>Dont have an account?</p>
+                    <p style={{ marginTop: "-20px", fontSize:"15px" }}>Proceed to <Link to="/register">Register</Link></p>
+                    </div>
 
 
 

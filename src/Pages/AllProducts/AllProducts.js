@@ -4,29 +4,41 @@ import axios from 'axios';
 import Footer from '../Home/Footer/Footer';
 import Service from '../Home/Service/Service';
 import Header from '../Shared/Header/Header';
-
+import "./AllProducts.css"
 const AllProducts = () => {
 
     const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState(false)
+
 
 
     useEffect(() => {
-        setLoading(true)
 
+        axios.get("https://dichakra-store-backend.onrender.com/products")
+            .then(response => {
+                setProducts(response.data)
+                console.log(products)
+            })
+            .catch(error => {
+                console.log(error);
+            });
 
         setTimeout(() => {
             axios.get("https://dichakra-store-backend.onrender.com/products")
                 .then(response => {
                     setProducts(response.data)
-                    console.log(products)
+
                 })
                 .catch(error => {
                     console.log(error);
                 });
-            setLoading(false)
-        }, 6000);
+
+        }, 3000);
+
     }, []);
+
+    const isLoading = Boolean(products?.length !== 0);
+
+
 
     return (
 
@@ -36,9 +48,12 @@ const AllProducts = () => {
 
             <div id="department" className='container'>
 
-                <div className="card-container">
+
+                <div className="card-container products">
+
                     {
-                        loading ?
+
+                        !isLoading ?
                             <img className='loadingGif' src="https://cdn.dribbble.com/users/1244169/screenshots/10734151/media/f5ed073f979bb7c38f1b9ecc9ff043b5.gif" width="1000px" alt="" />
                             :
                             products.map(service => <Service

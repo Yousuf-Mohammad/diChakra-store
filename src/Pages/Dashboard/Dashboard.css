@@ -1,13 +1,17 @@
+.ani {
+    width: 50vw;
+    height: 70vh;
+}
+
 @media only screen and (max-width: 768px) {
     .ani {
-        width: 80%;
-
+        width: 50vw;
     }
 }
 
 @media only screen and (min-width: 768px) {
     .ani {
-        width: 550px;
+        width: 50vw;
 
     }
 }

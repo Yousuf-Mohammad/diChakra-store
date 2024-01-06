@@ -43,7 +43,7 @@ const OrderPage = () => {
             <div className='container mt-5' >
                 <div className='row'>
                     <h1>Order Details</h1>
-
+                    <hr />
                     <div className='col-lg-6  mb-5'>
                         <Card className='card'>
                             <Card.Img className="order-img" style={{ width: '100%' }} variant="top" src={serviceDetails.img} />
@@ -56,7 +56,7 @@ const OrderPage = () => {
                     </div>
                     <div className='col-lg-6 order-service'>
 
-                        <form className='' onSubmit={handleSubmit(onSubmit)}>
+                        <form className='formData' onSubmit={handleSubmit(onSubmit)}>
 
                             <input defaultValue={user?.displayName} {...register("Name")} />
                             <input defaultValue={user?.email} {...register("Email", { required: true })} />

@@ -1,33 +1,38 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Service from '../Service/Service';
 import './Services.css';
 
 const Services = () => {
     const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState(false);
+
 
 
     useEffect(() => {
-        setLoading(true)
 
-
-
-
+        axios.get("https://dichakra-store-backend.onrender.com/products")
+            .then(response => {
+                setProducts(response.data)
+                
+            })
+            .catch(error => {
+                console.log(error);
+            });
         setTimeout(() => {
             axios.get("https://dichakra-store-backend.onrender.com/products")
                 .then(response => {
                     setProducts(response.data)
-                    console.log(products)
+
                 })
                 .catch(error => {
                     console.log(error);
-                }); setLoading(false)
+                });
         }, 6000);
-    }, [])
+    })
 
 
-
+    const isLoading = Boolean(products.length !== 0);
 
 
     return (
@@ -36,7 +41,7 @@ const Services = () => {
             <div className="card-container">
 
                 {
-                    loading ?
+                    !isLoading ?
                         <img className='loadingGif' src="https://cdn.dribbble.com/users/1244169/screenshots/10734151/media/f5ed073f979bb7c38f1b9ecc9ff043b5.gif" width="1000px" alt="" />
                         : products.slice(0, 6).map(service => <Service  //
                             key={service._id}
@@ -44,11 +49,14 @@ const Services = () => {
 
 
                         ></Service>)
-
+                        
                 }
+                
 
             </div>
-
+            <Link to={`/allProducts`}>
+                <button className="btn moreButton">More Products</button>
+            </Link>
         </div>
     );
 };

@@ -23,22 +23,28 @@ const Header = () => {
                     />diChakra</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link className="text-light" as={Link} to="/allProducts">Explore </Nav.Link>
-                        {user?.email ? <Nav.Link className="text-light" as={Link} to="/dashboard">DashBoard </Nav.Link> : ""}
+                        
+                  
 
-
-
+                        {user?.email ?<Navbar.Text>
+                            <Nav.Link className="text-light" as={Link} to="/dashboard">DashBoard </Nav.Link>
+                            </Navbar.Text> : null}
 
                         <Navbar.Text>
                             <Nav.Link as={Link} to="/login" className="text-warning" >{user?.displayName}</Nav.Link>
                         </Navbar.Text>
+
                         {user?.email ?
                             <Button onClick={logout} variant="secondary">LogOut</Button> :
+                            <Navbar.Text>
                             <Nav.Link className="text-light" as={Link} to="/login">Login </Nav.Link>
+                            </Navbar.Text>
                         }
                         {user?.email ?
-                            <></> :
+                            null :
+                            <Navbar.Text>
                             <Nav.Link className="text-light" as={Link} to="/register">Register </Nav.Link>
+                            </Navbar.Text>
                         }
 
 

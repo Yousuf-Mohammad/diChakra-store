@@ -1,11 +1,31 @@
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 30px;
+   
+
 }
 
 .loadingGif {
+    margin-top: 50px;
     width: 70vw;
+}
+
+.moreButton{
+    border: 1px solid black;
+    background-color: #3b3630;
+    color: white;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px #6c7784;
+    padding-right: 20px;
+    border-radius: none;
+}
+
+.moreButton:hover{
+    background-color: #61666b;
+    box-shadow: 10px 10px 10px #6c7784;
+    color: white;
+
 }
 
 /* Make it responsive */

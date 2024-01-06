@@ -1,0 +1,24 @@
+.loginBox{
+    border: 1px solid black;
+    padding: 30px;
+    width: 60%;
+    box-shadow: 10px 10px 10px #d6dfdc;
+    border-radius: 2px;
+    background-color: #edeeec;
+    margin-top: 60px;
+    
+
+}
+
+.imageLogin{
+    width: 30vw;
+    height: 60vh;
+  
+}
+.submitButton{
+    width: 60%;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #61666b;
+    color: white;
+}

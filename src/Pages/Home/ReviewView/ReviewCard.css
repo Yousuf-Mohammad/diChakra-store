@@ -4,7 +4,10 @@
 
 .reviewBox {
     padding: 20px;
-    height: 460px;
-    background-color: rgb(238, 236, 235);
+    height: 250px;
+    border : 3px solid black;
+    box-shadow: 3px 3px 3px gray;
+
+    
 
 }

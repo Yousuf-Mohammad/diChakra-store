@@ -1,12 +1,22 @@
 .service {
     border: 2px solid black;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px gray;
+    box-shadow: 3px 3px 3px #6c7784;
+    background-color: white;
 
 }
 
 .service:hover {
-    box-shadow: 10px 10px 25px black;
+    box-shadow: 5px 5px 10px #6c7784;
+}
+.detailButton{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    font-weight: 800;
+    background-color: #3b3630;
+    color: white;
+}
+.detailButton:hover{
+    box-shadow: 5px 5px 5px black;
 }
 
 img {
